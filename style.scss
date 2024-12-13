@@ -1,0 +1,279 @@
+// Break-Points
+$mobile: 600px;
+$tablet: 976px;
+$desktop: 1440px;
+
+// Colors Primary
+$red: #ea5353;
+$cyan: #45d3d3;
+$orange: #fcaf4a;
+$blue: #549ef2;
+
+// Colors Neutral
+$very-dark-blue: #4c4e61;
+$grayish-blue: #a3a5ae;
+$very-light-gray: #fafafa;
+$white: #ffffff;
+
+// Fonts
+$poppins: "Poppins", sans-serif;
+
+// Font-Weight
+$extralight: 200;
+$regular: 400;
+$semibold: 600;
+
+// Sizing
+$xs: 0.5rem;
+$xs-m: 0.75rem;
+$xs-l: 0.9rem;
+$sm: 1rem;
+$sm-s: 1.25rem;
+$sm-m: 1.5rem;
+$sm-l: 1.75rem;
+$md: 2rem;
+$md-s: 2.25rem;
+$md-m: 2.5rem;
+$md-l: 2.75rem;
+$lg: 3rem;
+$lg-s: 3.25rem;
+$lg-m: 3.5rem;
+$lg-l: 3.75rem;
+$xl: 4rem;
+$xl-s: 4.25rem;
+$xl-m: 4.5rem;
+$xl-l: 4.75rem;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+
+  body {
+    background-color: $very-light-gray;
+    font-family: $poppins;
+    font-size: 15px;
+  }
+
+}
+
+
+.red {
+  padding: 2px 0;
+  background-color: $red;
+}
+.cyan {
+  padding: 2px 0;
+  background-color: $cyan;
+}
+.orange {
+  padding: 2px 0;
+  background-color: $orange;
+}
+.blue {
+  padding: 2px 0;
+  background-color: $blue;
+}
+
+.line {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media (max-width: $desktop) {
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: $xl-l;
+    text-align: center;
+    line-height: $md;
+  }
+
+  .subtitle {
+    font-size: $md-s;
+    font-weight: $extralight;
+    color: $grayish-blue;
+    margin-bottom: $sm;
+  }
+
+  .title {
+    font-size: $md-s;
+    color: $very-dark-blue;
+    margin-bottom: $sm;
+    font-weight: $semibold;
+  }
+
+  .subheading {
+    font-size: $sm;
+    line-height: $sm-m;
+    color: $grayish-blue;
+    margin-bottom: $lg;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: $sm-l;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    padding: $md;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .10);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: $white;
+  }
+
+
+  .c-card {
+    display: grid;
+    grid-gap: $sm-l;
+  }
+
+  .card-heading {
+    font-weight: $semibold; 
+    font-size: $sm-s;
+    margin-bottom: $xs-l;
+    color: $very-dark-blue;
+  }
+
+  .card-text {
+    font-size: $xs-l;
+    margin-bottom: $md;
+    color: $grayish-blue;
+  }
+
+  .card-img {
+    display: flex;
+    justify-content: end;
+  }
+
+}
+
+@media (max-width: $tablet) {
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: $xl;
+    text-align: center;
+    line-height: $md;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .subtitle {
+    font-size: $sm-l;
+    font-weight: $extralight;
+    color: $grayish-blue;
+    margin-bottom: $xs;
+  }
+
+  .title {
+    font-size: $sm-l;
+    color: $very-dark-blue;
+    margin-bottom: $xs-l;
+    font-weight: $semibold;
+  }
+
+  .subheading {
+    font-size: $xs-m;
+  }
+
+  .l-card, .c-card, .r-card {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .c-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .line {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .l-card, .r-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: $mobile) {
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 90%;
+    padding: 0 $xs;
+    margin: 0 auto;
+    text-align: center;
+  } 
+
+  .subtitle {
+    font-size: $md;
+    color: $very-dark-blue;
+  }
+
+  .title {
+    font-size: $md;
+  }
+
+  .subheading {
+    font-size: $sm-s;
+    line-height: $sm-l;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-heading {
+    font-size: $sm-l;
+  }
+  
+  .card-text {
+    font-size: $sm;
+  }
+  
+}
